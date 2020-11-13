@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/SiteTemplate.Master" AutoEventWireup="true" CodeBehind="Top.master.cs" Inherits="boardWebPage.Top" %>
+<asp:Content ID="ctnTop" ContentPlaceHolderID="cphTop" runat="server">
+    <table style="width:800px">
+		<tr>
+			<td style="width:150px;"><img src="/images/com.jpg" style="height:60px; width:150px;" />
+			</td>
+            <td style="vertical-align:bottom; text-align:right;">
+	            <td style="vertical-align:bottom; text-align:right;">
+                <a href="index.aspx">[홈]</a>
+                &nbsp;&nbsp;&nbsp;
+				<a href="/Board/BoardList.aspx">[게시판]</a>
+            </td>
+			<td style="vertical-align:bottom; text-align:right; width:100px">
+			</td>
+		</tr>
+	</table>
+	<hr />
+</asp:Content>
+<asp:Content ID="ctnLeft" ContentPlaceHolderID="cphLeft" runat="server">
+    <asp:ContentPlaceHolder ID="cphLeft" runat="server">
+	</asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="ctnContent" ContentPlaceHolderID="cphContent" runat="server">
+    <asp:ContentPlaceHolder ID="cphContent" runat="server">
+	</asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="ctnBottom" ContentPlaceHolderID="cphBottom" runat="server">
+    <asp:ContentPlaceHolder ID="cphBottom" runat="server">
+	</asp:ContentPlaceHolder>
+</asp:Content>

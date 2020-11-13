@@ -1,0 +1,9 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Left.master" AutoEventWireup="true" CodeBehind="Bottom.master.cs" Inherits="boardWebPage.Bottom" %>
+<asp:Content ID="cntContent" ContentPlaceHolderID="cphContent" Runat="Server">
+	<asp:ContentPlaceHolder ID="cphContent" runat="server">
+	</asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="cntBottom" ContentPlaceHolderID="cphBottom" Runat="Server">
+	<hr />
+	Copyleft <img src="/images/copyleft.png" style="height: 15px; width: 15px" /> Since 2020
+</asp:Content>
