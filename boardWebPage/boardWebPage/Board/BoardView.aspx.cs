@@ -15,32 +15,35 @@ namespace boardWebPage.Board
         {
             if (!IsPostBack)
             {
+                SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["connectionString"].ConnectionString);
+                conn.Open();
+
+                //  조회수 증가
+                string updateSql = "update RetblBrd set readcnt=readcnt+1 where num=" + Request["No"];
+                SqlCommand cmd = new SqlCommand(updateSql, conn);
+                cmd.ExecuteNonQuery();
+
+                // 문자열로 받은 게시물 ID로 데이터 행 선택
+                string selectSql = "select * from RetblBrd where num=" + Request["No"];
+                SqlCommand Scmd = new SqlCommand(selectSql, conn);
+                Scmd.ExecuteNonQuery();
+                SqlDataReader dr = Scmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    txtname.Text = dr["name"].ToString();
+                    txtwritedate.Text = dr["writedate"].ToString();
+                    txtreadcnt.Text = dr["readcnt"].ToString();
+                    txttitle.Text = dr["title"].ToString();
+                    txtcontents.Text = dr["contents"].ToString();
+                    lblnum.Text = dr["num"].ToString();
+                    lblrefer.Text = dr["refer"].ToString();
+                    lbldepth.Text = dr["depth"].ToString();
+                    lblpos.Text = dr["pos"].ToString();
+                }
+                dr.Close();
+                conn.Close();
             }
-
-            SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["connectionString"].ConnectionString);
-            conn.Open();
-
-            string updateSql = "update RetblBrd set readcnt=readcnt+1 where num=" + Request["No"];
-            SqlCommand cmd = new SqlCommand(updateSql, conn);
-            cmd.ExecuteNonQuery();
-
-            string selectSql = "select * from RetblBrd where num=" + Request["No"];
-            SqlCommand Scmd = new SqlCommand(selectSql, conn);
-            Scmd.ExecuteNonQuery();
-
-            SqlDataReader dr = Scmd.ExecuteReader();
-            if (dr.Read())
-            {
-                txtname.Text = dr["name"].ToString();
-                txtwritedate.Text = dr["writedate"].ToString();
-                txtreadcnt.Text = dr["readcnt"].ToString();
-                txttitle.Text = dr["title"].ToString();
-                txtcontents.Text = dr["contents"].ToString();
-                lblrefer.Text = dr["refer"].ToString();
-                //2개
-            }
-            dr.Close();
-            conn.Close();
         }
 
         protected void btnList_Click(object sender, EventArgs e)
@@ -60,7 +63,7 @@ namespace boardWebPage.Board
 
         protected void btnReply_Click(object sender, EventArgs e)
         {
-            Response.Redirect("BoardWrite.aspx?Action=Reply?No=" + Request["No"] + "&refer =" + lblrefer.Text + 2);
+            Response.Redirect("BoardReply.aspx?Action=Reply?No=" + Request["No"] + "&num=" + lblnum.Text + "&refer=" + lblrefer.Text + "&depth=" + lbldepth.Text + "&pos=" + lblpos.Text);
         }
     }
 }

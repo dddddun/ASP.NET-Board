@@ -15,4 +15,15 @@
 
 ALTER TABLE [dbo].[RetblBrd] ADD reg_date INT NULL;
 
+ALTER TABLE [dbo].[RetblBrd] ADD reg_date INT NULL;
+
+
 select * from RetblBrd
+
+update RetblBrd set depth = 1 where num = 1
+SELECT refer, pos, depth FROM RetblBrd WHERE num=3
+
+delete from RetblBrd where num=60;
+
+
+update RetblBrd set refer = num where refer = 0

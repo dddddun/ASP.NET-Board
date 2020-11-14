@@ -23,7 +23,7 @@ namespace boardWebPage.Board
             string strSpace = "";
             for (int i = 0; i < depth; i++)
             {
-                strSpace += "&nbsp;&nbsp;&nbsp;";
+                strSpace += "&nbsp;&nbsp;";
             }
             return strSpace;
         }

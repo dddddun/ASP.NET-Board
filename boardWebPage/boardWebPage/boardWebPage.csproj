@@ -69,9 +69,11 @@
   <ItemGroup>
     <Content Include="Board\BoardList.aspx" />
     <Content Include="Board\BoardModify.aspx" />
+    <Content Include="Board\BoardReply.aspx" />
     <Content Include="Board\BoardView.aspx" />
     <Content Include="Board\BoardWrite.aspx" />
     <Content Include="Board\CheckPassword.aspx" />
+    <Content Include="images\background.png" />
     <Content Include="images\com.jpg" />
     <Content Include="images\copyleft.png" />
     <Content Include="index.aspx" />
@@ -94,6 +96,13 @@
     </Compile>
     <Compile Include="Board\BoardModify.aspx.designer.cs">
       <DependentUpon>BoardModify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Board\BoardReply.aspx.cs">
+      <DependentUpon>BoardReply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Board\BoardReply.aspx.designer.cs">
+      <DependentUpon>BoardReply.aspx</DependentUpon>
     </Compile>
     <Compile Include="Board\BoardView.aspx.cs">
       <DependentUpon>BoardView.aspx</DependentUpon>

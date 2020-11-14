@@ -5,7 +5,7 @@
 		<td align="center">
             <asp:LoginView ID="LoginView1" runat="server">
                 <AnonymousTemplate>
-                    <asp:Login ID="Login1" runat="server" BackColor="#F7F6F3" BorderColor="#E6E2D8" BorderPadding="4" BorderStyle="Solid" BorderWidth="1px" CreateUserUrl="~/Public/Register.aspx" DestinationPageUrl="~/Public/Default.aspx" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#333333" PasswordRecoveryText="비밀번호 찾기" PasswordRecoveryUrl="~/Public/PassRecovery.aspx" CreateUserText="회원가입" Width="262px">
+                    <asp:Login ID="Login1" runat="server" BackColor="#F7F6F3" BorderColor="#E6E2D8" BorderPadding="4" BorderStyle="Solid" BorderWidth="1px" CreateUserUrl="~/Public/Register.aspx" DestinationPageUrl="~/Public/Default.aspx" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#333333" PasswordRecoveryText="비밀번호 찾기" PasswordRecoveryUrl="~/Public/PasswordRecovery.aspx" CreateUserText="회원가입" Width="262px">
                     <InstructionTextStyle Font-Italic="True" ForeColor="Black" />
                     <LoginButtonStyle BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284775" />
                     <TextBoxStyle Font-Size="0.8em" />
@@ -16,7 +16,7 @@
                     <asp:LoginName ID="LoginName2" runat="server" />님 반갑습니다!
                     <br />
                     <asp:LoginStatus ID="LoginStatus1" runat="server" /> &nbsp;&nbsp;&nbsp;
-                    <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/Public/ChangePassword.aspx">암호변경</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/ChangePassword.aspx">암호변경</asp:LinkButton>
                 </LoggedInTemplate>
             </asp:LoginView>
 		</td></tr>

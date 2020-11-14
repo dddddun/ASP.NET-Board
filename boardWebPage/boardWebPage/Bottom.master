@@ -5,5 +5,7 @@
 </asp:Content>
 <asp:Content ID="cntBottom" ContentPlaceHolderID="cphBottom" Runat="Server">
 	<hr />
-	Copyleft <img src="/images/copyleft.png" style="height: 15px; width: 15px" /> Since 2020
+	<div style="text-align: center">
+		Copyleft <img src="/images/copyleft.png" style="height: 15px; width: 15px" /> Since 2020
+	</div>
 </asp:Content>

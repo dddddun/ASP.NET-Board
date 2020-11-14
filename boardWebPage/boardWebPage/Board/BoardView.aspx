@@ -29,14 +29,15 @@
                 <asp:Button ID="btnModify" runat="server" OnClick="btnModify_Click" Text="수정" />
                 &nbsp;&nbsp;
                 <asp:Button ID="btnDelete" runat="server" OnClick="btnDelete_Click" Text="삭제" />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="lblrefer" runat="server" Text="Label" Visible="False"></asp:Label>
                 &nbsp;&nbsp;&nbsp;
                 <asp:Label ID="lbldepth" runat="server" Text="Label" Visible="False"></asp:Label>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="lblpos" runat="server" Text="Label" Visible="False"></asp:Label>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;
+                <asp:Label ID="lblnum" runat="server" Text="Label" Visible="False"></asp:Label>
+                &nbsp;&nbsp;&nbsp;
                 <asp:Button ID="btnReply" runat="server" OnClick="btnReply_Click" Text="답변등록" />
                 &nbsp;&nbsp;&nbsp;
                 <asp:Button ID="btnList" runat="server" Text="리스트" OnClick="btnList_Click" />

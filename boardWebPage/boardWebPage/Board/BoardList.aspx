@@ -9,6 +9,9 @@
                 <div class="auto-style1">
                     <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="num" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Width="735px">
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                        <EmptyDataTemplate>
+                            등록된 게시물이 없습니다.
+                        </EmptyDataTemplate>
                         <Columns>
                             <asp:BoundField DataField="num" HeaderText="No" InsertVisible="False" ReadOnly="True" SortExpression="num" />
                             <asp:TemplateField HeaderText="제목">
@@ -36,7 +39,7 @@
                         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                     </asp:GridView>  
                 </div>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:connectionString %>" SelectCommand="SELECT [num], [title], [name], [writedate], [readcnt] FROM [RetblBrd]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:connectionString %>" SelectCommand="SELECT [num], [title], [name], [writedate], [readcnt], [refer], [depth], [pos] FROM [RetblBrd] ORDER BY [refer] DESC, [pos]"></asp:SqlDataSource>
             </td>
         </tr>
         <tr>

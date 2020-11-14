@@ -34,7 +34,6 @@ namespace boardWebPage.Board
             cmd.Parameters.AddWithValue("@refer", "0");
             cmd.Parameters.AddWithValue("@depth", "0");
             cmd.Parameters.AddWithValue("@pos", "0");
-
             cmd.ExecuteNonQuery();
 
             string updateSql = "update RetblBrd set refer = num where refer = 0";

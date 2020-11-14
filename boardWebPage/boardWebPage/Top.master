@@ -2,15 +2,15 @@
 <asp:Content ID="ctnTop" ContentPlaceHolderID="cphTop" runat="server">
     <table style="width:800px">
 		<tr>
-			<td style="width:150px;"><img src="/images/com.jpg" style="height:60px; width:150px;" />
+			<td style="width:150px;">
+				<img src="/images/com.jpg" style="height:60px; width:89px;" />
 			</td>
-            <td style="vertical-align:bottom; text-align:right;">
-	            <td style="vertical-align:bottom; text-align:right;">
-                <a href="index.aspx">[홈]</a>
-                &nbsp;&nbsp;&nbsp;
+            <td style="width:600px; vertical-align:bottom; text-align:right;">
+				<a href="/index.aspx">[홈]</a>
+				&nbsp;&nbsp;&nbsp;
 				<a href="/Board/BoardList.aspx">[게시판]</a>
             </td>
-			<td style="vertical-align:bottom; text-align:right; width:100px">
+			<td style="vertical-align:bottom; text-align:right; width:50px">
 			</td>
 		</tr>
 	</table>
